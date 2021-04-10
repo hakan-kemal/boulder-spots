@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bouldering Spot</title>
-  </head>
-  <body>
-    <h2><%= spot.title %></h2>
-    <h4><%= spot.location %></h4>
-    <p>
-      <form action="/boulder-spots/<%= spot._id %>?_method=DELETE" method="post">
-        <button>Delete spot</button>
-      </form>
-    </p>
-    <footer>
-      <a href="/boulder-spots/<%= spot._id %>/edit">Edit spot</a>
-      <a href="/boulder-spots">All bouldering spots</a>
-    </footer>
-  </body>
-</html>
+<% layout('layouts/boilerplate')%>
+<h2><%= spot.title %></h2>
+<h4><%= spot.location %></h4>
+<p>
+  <form action="/boulder-spots/<%= spot._id %>?_method=DELETE" method="post">
+    <button>Delete spot</button>
+  </form>
+</p>
+<footer>
+  <a href="/boulder-spots/<%= spot._id %>/edit">Edit spot</a>
+  <a href="/boulder-spots">All bouldering spots</a>
+</footer>

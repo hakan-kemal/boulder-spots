@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bouldering Spots</title>
-  </head>
-  <body>
-    <h2>All Bouldering Spots</h2>
-    <div>
-      <a href="/boulder-spots/new">Add bouldering location</a>
-    </div>
-    <ul>
-      <% for (spot of spots) { %>
-      <li><a href="/boulder-spots/<%= spot._id %>"><%= spot.title %></a></li>
-      <% }%>
-    </ul>
-  </body>
-</html>
+<% layout('layouts/boilerplate')%>
+<h2>All Bouldering Spots</h2>
+<div>
+  <a href="/boulder-spots/new">Add bouldering location</a>
+</div>
+<ul>
+  <% for (spot of spots) { %>
+  <li><a href="/boulder-spots/<%= spot._id %>"><%= spot.title %></a></li>
+  <% }%>
+</ul>

@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add Bouldering Spot</title>
-  </head>
-  <body>
-    <h2>Add Bouldering Spot</h2>
-    <form action="/boulder-spots" method="post">
-      <div>
-        <label for="title">Title</label>
-        <input type="text" name="boulderSpot[title]" id="title" />
-      </div>
-      <div>
-        <label for="location">Location</label>
-        <input type="text" name="boulderSpot[location]" id="location" />
-      </div>
-      <button>Add spot</button>
-      <a href="/boulder-spots">All bouldering spots</a>
-    </form>
-  </body>
-</html>
+<% layout('layouts/boilerplate')%>
+<h2>Add Bouldering Spot</h2>
+<form action="/boulder-spots" method="post">
+  <div>
+    <label for="title">Title</label>
+    <input type="text" name="boulderSpot[title]" id="title" />
+  </div>
+  <div>
+    <label for="location">Location</label>
+    <input type="text" name="boulderSpot[location]" id="location" />
+  </div>
+  <button>Add spot</button>
+  <a href="/boulder-spots">All bouldering spots</a>
+</form>
+<% layout('layouts/boilerplate')%>
