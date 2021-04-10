@@ -23,8 +23,9 @@ const seedDB = async () => {
     const randomCity = Math.floor(Math.random() * 1000);
     const boulderSpot = new BoulderSpot({
       title: `${randomElement(descriptors)} ${randomElement(places)}`,
-      description: `Bouldering spot ${i}`,
+      description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolores vero perferendis laudantium, consequuntur voluptatibus nulla architecto, sit soluta esse iure sed labore ipsam a cum nihil atque molestiae deserunt!`,
       location: `${cities[randomCity].city}, ${cities[randomCity].state}`,
+      image: 'https://source.unsplash.com/collection/483251',
     });
     await boulderSpot.save();
   }
