@@ -1,4 +1,4 @@
-const ejs-mate = require('ejs-mate')
+const ejsMate = require('ejs-mate');
 const express = require('express');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
@@ -21,7 +21,7 @@ db.once('open', () => {
   console.log('database connected');
 });
 
-server.engine('ejs', ejs-mate)
+server.engine('ejs', ejsMate);
 server.set('view engine', 'ejs');
 server.set('views', path.join(__dirname, 'views'));
 

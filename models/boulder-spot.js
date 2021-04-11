@@ -13,6 +13,9 @@ const BoulderSpot = new Schema({
     type: String,
     required: true,
   },
+  image: {
+    type: String,
+  },
 });
 
 module.exports = mongoose.model('spots', BoulderSpot);
